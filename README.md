@@ -42,6 +42,28 @@ A aplicação de produção ficará disponível em [http://localhost:3000](http:
 
 ## Executar com Docker
 
+### Docker Compose
+
+```bash
+docker compose up --build
+```
+
+Abra [http://localhost:3000](http://localhost:3000). Para parar e remover os
+recursos do Compose:
+
+```bash
+docker compose down
+```
+
+Se a porta `3000` já estiver ocupada no PowerShell, escolha outra porta do host:
+
+```powershell
+$env:APP_PORT = "3001"
+docker compose up --build
+```
+
+Nesse caso, abra [http://localhost:3001](http://localhost:3001).
+
 ### Build da imagem
 
 ```bash
