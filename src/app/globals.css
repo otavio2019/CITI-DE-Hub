@@ -3,9 +3,8 @@
 @media(max-width:900px){.hub-nav{display:none}.hub-header{height:76px}.header-cta{margin-left:auto;padding:10px 12px}.announcement{justify-content:flex-start;gap:10px}.announcement p{display:none}.hero-section{min-height:680px;padding-top:75px}.hero-art{width:100%;opacity:.65}.hero-copy{max-width:90%}.hero-copy h1{font-size:70px}.hero-bottom{font-size:9px}.hero-scroll{display:none}.section,.stats-section,.opportunities-section{padding:76px 7vw}.intro-grid,.section-heading-row,.stats-section,.opportunities-section{grid-template-columns:1fr;gap:30px}.benefit-list{grid-template-columns:repeat(2,1fr);margin-top:45px}.audience-grid{grid-template-columns:repeat(2,1fr)}.stats-grid{margin-top:20px}.opportunity-aside{display:none}.hub-footer{align-items:flex-start;flex-wrap:wrap;gap:25px}.footer-links{margin-left:0;align-items:flex-start}}
 @media(max-width:560px){.announcement{font-size:9px;padding-inline:18px}.brand{min-width:0}.brand small{display:none}.brand strong{font-size:22px}.header-cta{font-size:10px}.hero-section{padding-inline:7vw}.hero-copy h1{font-size:58px}.hero-lead{font-size:16px}.hero-actions{align-items:flex-start;flex-direction:column;gap:18px}.hero-art{opacity:.34}.sun{width:220px;height:220px;right:6%;top:21%}.hero-tag{font-size:8px}.section h2{font-size:48px}.benefit-list,.audience-grid{grid-template-columns:1fr}.audience-card{min-height:220px}.audience-card h3{margin-top:45px}.journey-grid article{grid-template-columns:45px 1fr 20px;gap:14px}.journey-grid h3{font-size:25px}.stats-grid strong{font-size:44px}.opportunities-content h2{font-size:55px}.hub-footer{padding:35px 7vw}.hub-footer>p{width:100%}}
 
-/* Sunburst oficial do CiTI-DE */
-.sunburst-visual{position:absolute;right:-2%;top:7%;width:min(49vw,570px);height:auto;color:var(--citi-yellow);opacity:.96;filter:drop-shadow(0 18px 40px rgba(255,184,0,.18));animation:sunburst-float 12s ease-in-out infinite}
-@keyframes sunburst-float{0%,100%{transform:translate3d(0,0,0) rotate(0deg)}50%{transform:translate3d(-8px,7px,0) rotate(1deg)}}
-@media(prefers-reduced-motion:reduce){.sunburst-visual{animation:none}}
-@media(max-width:900px){.sunburst-visual{right:-13%;top:8%;width:70vw;opacity:.55}}
-@media(max-width:560px){.sunburst-visual{right:-22%;top:10%;width:92vw;opacity:.35}}
+
+/* Sol oficial reaproveitado do primeiro CITI-DE */
+.hero-sun{position:absolute;right:-7%;top:3%;width:min(58vw,680px);height:auto;object-fit:contain;opacity:.92;filter:drop-shadow(0 20px 50px rgba(255,184,0,.16))}
+@media(max-width:900px){.hero-sun{right:-14%;top:8%;width:78vw;opacity:.55}}
+@media(max-width:560px){.hero-sun{right:-25%;top:11%;width:105vw;opacity:.34}}
