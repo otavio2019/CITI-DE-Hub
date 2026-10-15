@@ -1,24 +1,13 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
-import Header from "@/components/layout/Header";
 
 export const metadata: Metadata = {
-  title: "Portal CiTI-DE | Patos - PB",
-  description:
-    "Serviços, programas e informações para impulsionar o desenvolvimento de Patos.",
-  icons: {
-    icon: "/icons/logo.png",
-  },
+  title: "CiTI-DE Hub | Inovação que aproxima",
+  description: "Serviços, programas e oportunidades de ciência, tecnologia, inovação e desenvolvimento em Patos.",
+  icons: { icon: "/icons/logo.png" },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  return (
-    <html lang="pt-BR" className="h-full antialiased">
-      <body className="flex min-h-full flex-col">
-        <Header />
-        {children}
-      </body>
-    </html>
-  );
+  return <html lang="pt-BR" className="h-full antialiased"><body className="min-h-full">{children}</body></html>;
 }
