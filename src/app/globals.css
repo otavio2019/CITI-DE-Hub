@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------------- */
+/* Tokens de identidade visual                                                */
+/* -------------------------------------------------------------------------- */
+:root {
+  --font-joan: Georgia, "Times New Roman", serif;
+  --font-geist-sans: Inter, system-ui, sans-serif;
+  --font-geist-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --citi-navy: #032842;
+  --citi-blue-dark: #064b78;
+  --citi-blue: #0867a8;
+  --citi-blue-light: #1688c7;
+  --citi-blue-soft: #eaf4fa;
+  --citi-surface: #edf4f8;
+  --citi-background: #f5f8fb;
+  --citi-text: #172b3a;
+  --citi-text-muted: #60758a;
+  --citi-yellow: #ffb800;
+  --citi-yellow-soft: #ffd45a;
+  --background: var(--citi-background);
+  --foreground: var(--citi-text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Base                                                                       */
+/* -------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--citi-background);
+  color: var(--citi-text);
+  font-family: var(--font-geist-sans), sans-serif;
+  margin: 0;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display {
+  font-family: var(--font-joan), serif;
+}
+
+::selection {
+  background: rgba(255, 184, 0, 0.35);
+  color: var(--citi-navy);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Superfície das seções após o hero                                          */
+/* -------------------------------------------------------------------------- */
+.portal-content-surface {
+  background: linear-gradient(180deg, var(--citi-blue-dark) 0%, var(--citi-navy) 48%, var(--citi-blue-dark) 100%);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Ticker de destaques                                                        */
+/* -------------------------------------------------------------------------- */
+.ticker-shell {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.ticker-track {
+  animation: ticker-scroll 40s linear infinite;
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Interações e foco                                                          */
+/* -------------------------------------------------------------------------- */
+a,
+button {
+  transition-duration: 180ms;
+  transition-property: background-color, border-color, color, box-shadow, transform;
+  transition-timing-function: ease-out;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--citi-yellow);
+  outline-offset: 3px;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
