@@ -1,4 +1,4 @@
-import { faqItems } from "@/lib/site-content";
+import { faqItems } from "@/lib/hub-content";
 
 export function FaqSection() {
 	return (

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { programDetails } from "@/lib/site-content";
+import { programDetails } from "@/lib/hub-content";
 
 export function generateStaticParams() {
 	return Object.keys(programDetails).map((slug) => ({ slug }));
@@ -17,7 +17,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
 	return (
 		<main className="portal-content-surface min-h-screen px-5 py-16 text-white sm:py-24">
 			<div className="mx-auto max-w-5xl">
-				<Link href="/#programas" className="text-sm font-bold text-[var(--citi-yellow-soft)] hover:text-[var(--citi-yellow)]">← Voltar para programas</Link>
+				<Link href="/#oportunidades" className="text-sm font-bold text-[var(--citi-yellow-soft)] hover:text-[var(--citi-yellow)]">← Voltar para programas</Link>
 				<header className="mt-10 max-w-3xl">
 					<p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--citi-yellow-soft)]">Programa CiTI-DE</p>
 					<h1 className="mt-3 text-5xl leading-tight sm:text-7xl">{program.title}</h1>
@@ -49,7 +49,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
 				</section>
 
 				<div className="mt-8 flex flex-wrap gap-3">
-					<a href="https://citide.patos.pb.gov.br/cartilha" className="inline-flex items-center rounded-full bg-[var(--citi-yellow)] px-5 py-3 font-bold text-[var(--citi-navy)] hover:bg-[var(--citi-yellow-soft)]">Quero saber mais</a>
+					<a href={program.sourceHref} target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full bg-[var(--citi-yellow)] px-5 py-3 font-bold text-[var(--citi-navy)] hover:bg-[var(--citi-yellow-soft)]">Ver fonte oficial ↗</a>
 					<Link href="/#contato" className="inline-flex items-center rounded-full border border-white/35 bg-white/10 px-5 py-3 font-bold text-white hover:border-[var(--citi-yellow)] hover:bg-white/15">Entrar em contato</Link>
 				</div>
 			</div>

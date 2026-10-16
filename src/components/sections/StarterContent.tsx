@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { programs, services } from "@/lib/site-content";
+import { programs, services } from "@/lib/hub-content";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PortalSections } from "@/components/sections/PortalSections";
 

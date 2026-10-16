@@ -1,4 +1,4 @@
-import { institutionalStats } from "@/lib/site-content";
+import { institutionalStats } from "@/lib/hub-content";
 
 export function StatsSection() {
 	return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { audiencePaths } from "@/lib/site-content";
+import { audiencePaths } from "@/lib/hub-content";
 import { FiArrowUpRight, FiBriefcase, FiUsers } from "react-icons/fi";
 
 export function AudienceSection() {

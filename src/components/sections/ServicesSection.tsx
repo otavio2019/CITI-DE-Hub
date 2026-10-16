@@ -1,4 +1,4 @@
-import { services } from "@/lib/site-content";
+import { services } from "@/lib/hub-content";
 import { resolveIcon, serviceIcons } from "@/lib/site-icons";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ServiceCard } from "@/components/ui/ServiceCard";

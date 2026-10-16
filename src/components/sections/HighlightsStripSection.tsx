@@ -1,4 +1,4 @@
-import { opportunities } from "@/lib/site-content";
+import { opportunities } from "@/lib/hub-content";
 import { FiArrowRight } from "react-icons/fi";
 
 /* Usa as primeiras oportunidades e repete para o ticker contínuo. */

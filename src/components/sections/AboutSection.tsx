@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { institutionalBodies } from "@/lib/site-content";
+import { institutionalBodies } from "@/lib/hub-content";
 import { FiArrowUpRight } from "react-icons/fi";
 
 export function AboutSection() {

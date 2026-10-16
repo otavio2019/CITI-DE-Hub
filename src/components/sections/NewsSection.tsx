@@ -1,4 +1,4 @@
-import { opportunities } from "@/lib/site-content";
+import { opportunities } from "@/lib/hub-content";
 import { FiArrowUpRight } from "react-icons/fi";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";

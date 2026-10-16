@@ -1,4 +1,4 @@
-import { programs } from "@/lib/site-content";
+import { programs } from "@/lib/hub-content";
 import { programIcons, resolveIcon } from "@/lib/site-icons";
 import { FiArrowUpRight } from "react-icons/fi";
 import { ProgramCard } from "@/components/ui/ProgramCard";

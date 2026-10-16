@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { ChangeEvent, FormEvent } from "react";
-import { heroCategories } from "@/lib/site-content";
+import { heroCategories } from "@/lib/hub-content";
 import { FiSearch } from "react-icons/fi";
 
 type HeroSectionProps = {

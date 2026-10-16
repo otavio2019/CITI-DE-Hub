@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { navigationLinks, programLinks, serviceLinks } from "@/lib/site-content";
+import { navigationLinks, programLinks, serviceLinks } from "@/lib/hub-content";
 import { FiArrowUpRight, FiChevronDown, FiChevronUp, FiMenu, FiX } from "react-icons/fi";
 
 /* -------------------------------------------------------------------------- */

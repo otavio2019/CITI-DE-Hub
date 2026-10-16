@@ -1,4 +1,4 @@
-import { quickAccessLinks } from "@/lib/site-content";
+import { quickAccessLinks } from "@/lib/hub-content";
 import { quickAccessIcons, resolveIcon } from "@/lib/site-icons";
 import { FiArrowUpRight } from "react-icons/fi";
 
