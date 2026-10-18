@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { programDetails } from "@/lib/hub-content";
+import PreAccelerationLanding from "@/components/pre-aceleracao/PreAccelerationLanding";
 
 export function generateStaticParams() {
 	return Object.keys(programDetails).map((slug) => ({ slug }));
@@ -12,6 +13,10 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
 
 	if (!program) {
 		notFound();
+	}
+
+	if (slug === "pre-aceleracao-startups") {
+		return <PreAccelerationLanding project={programDetails["pre-aceleracao-startups"]} />;
 	}
 
 	return (
