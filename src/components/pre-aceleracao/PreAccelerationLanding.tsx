@@ -71,7 +71,7 @@ export default function PreAccelerationLanding({ project }: { project: Project }
         <div className="preaccel-container preaccel-goals-grid"><div><div className="preaccel-section-heading"><span>04 · Ao final</span><h2>O que cada participante leva consigo.</h2></div><p className="preaccel-muted">A proposta é sair da jornada com mais maturidade, uma solução mais clara e próximos passos definidos.</p></div><ul>{project.goals.map((goal) => <li key={goal}><FiCheck />{goal}</li>)}</ul></div>
       </section>
 
-      <section className="preaccel-cta"><div className="preaccel-container"><p className="preaccel-eyebrow">Patos + Farol Digital</p><h2>Tem uma solução para colocar em movimento?</h2><div className="preaccel-actions"><Link href="/programas/pre-aceleracao-startups/inscricao" className="preaccel-button preaccel-button-primary">Iniciar inscrição <FiArrowUpRight /></Link><a href={project.sourceHref} className="preaccel-text-link" target="_blank" rel="noreferrer">Ler documento do projeto <FiArrowUpRight /></a></div></div></section>
+      <section className="preaccel-cta"><div className="preaccel-container"><p className="preaccel-eyebrow">Patos + Farol Digital</p><h2>Tem uma solução para colocar em movimento?</h2><div className="preaccel-actions"><Link href="/programas/pre-aceleracao-startups/inscricao" className="preaccel-button preaccel-button-primary">Iniciar inscrição <FiArrowUpRight /></Link><a href="mailto:citi-de@patos.pb.gov.br?subject=Projeto%20Piloto%20de%20Pr%C3%A9-acelera%C3%A7%C3%A3o" className="preaccel-text-link">Falar com a CiTI-DE <FiArrowUpRight /></a></div></div></section>
     </main>
   );
 }

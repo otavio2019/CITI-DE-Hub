@@ -6,6 +6,7 @@ export const navigationLinks = [
 ];
 
 export const officialLinks = {
+	portal: "https://citide.patos.pb.gov.br/",
 	cartilha: "https://citide.patos.pb.gov.br/cartilha",
 	inovaPatos: "https://citide.patos.pb.gov.br/cartilha#inovapatos",
 	aceleraPatos: "https://citide.patos.pb.gov.br/cartilha#acelerapatos",
@@ -17,7 +18,6 @@ export const officialLinks = {
 	torneioRobotica: "https://citide.patos.pb.gov.br/torneio-de-robotica",
 	vitrineStartups: "https://citide.patos.pb.gov.br/vitrine",
 	preAceleracaoStartups: "/programas/pre-aceleracao-startups",
-	preAceleracaoDocumento: "/documentos/projeto-piloto-pre-aceleracao-startups-patos.pdf",
 	seloInovacao: "https://citide.patos.pb.gov.br/cartilha#reconhecimento",
 } as const;
 
@@ -176,7 +176,7 @@ export const programDetails = {
 		participation: "O projeto prevê seleção de até 10 participantes. Consulte o documento do projeto para acompanhar as orientações de divulgação, inscrição e mobilização.",
 		documents: "Consulte as orientações da seleção e os requisitos divulgados pela CiTI-DE e pelo Ecossistema Farol Digital.",
 		period: "Duração aproximada de 8 semanas, com início previsto em 15 de outubro de 2026 e encerramento previsto para 10 de dezembro de 2026. O cronograma pode sofrer ajustes.",
-		sourceHref: officialLinks.preAceleracaoDocumento,
+		sourceHref: officialLinks.portal,
 		partner: "Prefeitura Municipal de Patos — CITI-DE, em parceria com o Ecossistema Farol Digital.",
 		goals: ["Selecionar até 10 startups", "Diagnosticar 100% dos participantes", "Garantir mentorias para todas as startups", "Realizar encontros de desenvolvimento dos negócios", "Realizar 1 Pitch Day ou Demo Day", "Conectar startups a parceiros e oportunidades de continuidade"],
 		timeline: [
