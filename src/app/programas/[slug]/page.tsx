@@ -41,6 +41,9 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
 					<InfoBlock title="Prazo ou período" text={program.period} />
 				</div>
 
+				{"partner" in program && <section className="mt-5 rounded-2xl border border-[var(--citi-yellow)]/30 bg-[var(--citi-yellow)]/10 p-6 sm:p-8"><h2 className="text-2xl">Realização</h2><p className="mt-3 leading-7 text-white/80">{program.partner}</p></section>}
+				{"goals" in program && <section className="mt-5 rounded-2xl border border-white/15 bg-white/10 p-6 sm:p-8"><h2 className="text-2xl">Metas do projeto</h2><ul className="mt-5 grid gap-3 sm:grid-cols-2">{program.goals.map((goal) => <li key={goal} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm leading-6 text-white/80">{goal}</li>)}</ul></section>}
+				{"timeline" in program && <section className="mt-5 rounded-2xl border border-white/15 bg-white/10 p-6 sm:p-8"><h2 className="text-2xl">Cronograma de execução</h2><ol className="mt-5 space-y-4">{program.timeline.map((item) => <li key={item.period} className="grid gap-1 border-t border-white/15 pt-4 sm:grid-cols-[minmax(180px,0.7fr)_1.3fr] sm:gap-5"><strong className="text-[var(--citi-yellow-soft)]">{item.period}</strong><span className="leading-6 text-white/80">{item.activity}</span></li>)}</ol></section>}
 				<section className="mt-5 rounded-2xl border border-white/15 bg-white/10 p-6 sm:p-8">
 					<h2 className="text-2xl">Perguntas frequentes</h2>
 					<div className="mt-5 space-y-4">

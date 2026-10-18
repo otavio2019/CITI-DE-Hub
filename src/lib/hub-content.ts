@@ -16,6 +16,8 @@ export const officialLinks = {
 	patosStartup: "https://citide.patos.pb.gov.br/patos-startup",
 	torneioRobotica: "https://citide.patos.pb.gov.br/torneio-de-robotica",
 	vitrineStartups: "https://citide.patos.pb.gov.br/vitrine",
+	preAceleracaoStartups: "/programas/pre-aceleracao-startups",
+	preAceleracaoDocumento: "/documentos/projeto-piloto-pre-aceleracao-startups-patos.pdf",
 	seloInovacao: "https://citide.patos.pb.gov.br/cartilha#reconhecimento",
 } as const;
 
@@ -58,6 +60,7 @@ export const quickAccessLinks = [
 ];
 
 export const opportunities = [
+	{ id: "pre-aceleracao-startups", category: "Startup", date: "15/10 a 10/12/2026", title: "Projeto Piloto de Pré-Aceleração de Startups", summary: "Jornada prática para até 10 startups ou projetos inovadores de Patos, em parceria com o Ecossistema Farol Digital.", status: "projeto piloto", href: officialLinks.preAceleracaoStartups },
 	{ id: "patos-startup", category: "Startup", date: "Edital 013/2026", title: "Patos Startup", summary: "Consulte o edital e as orientações oficiais para participar.", status: "consulte o edital", href: officialLinks.patosStartup },
 	{ id: "robotica", category: "Educação", date: "Etapa Patos", title: "Torneio de Robótica", summary: "Acompanhe as informações e etapas do TJR em Patos.", status: "consulte informações", href: officialLinks.torneioRobotica },
 	{ id: "vitrine-startups", category: "Startups", date: "Ecossistema local", title: "Vitrine de Startups", summary: "Conheça negócios inovadores e tecnologias nascidas em Patos.", status: "disponível", href: officialLinks.vitrineStartups },
@@ -67,6 +70,7 @@ export const opportunities = [
 ];
 
 export const services = [
+	{ id: "pre-aceleracao-startups", title: "Pré-aceleração de Startups", text: "Diagnóstico, mentorias, desenvolvimento de negócios e conexão com oportunidades de continuidade.", status: "Conheça o projeto", href: officialLinks.preAceleracaoStartups, external: false },
 	{ id: "patos-startup", title: "Patos Startup", text: "Conheça o edital e as iniciativas para negócios inovadores do ecossistema de Patos.", status: "Consulte o edital", href: officialLinks.patosStartup, external: true },
 	{ id: "robotica", title: "Torneio de Robótica", text: "Acompanhe o torneio e as etapas realizadas em Patos.", status: "Consulte informações", href: officialLinks.torneioRobotica, external: true },
 	{ id: "startups", title: "Vitrine de Startups", text: "Conheça negócios inovadores e tecnologias nascidas em Patos.", status: "Acessar vitrine", href: officialLinks.vitrineStartups, external: true },
@@ -78,6 +82,7 @@ export const services = [
 ];
 
 export const programs = [
+	{ id: "pre-aceleracao-startups", title: "Pré-aceleração de Startups", text: "Jornada de oito semanas para aumentar a maturidade de startups e projetos inovadores de Patos.", status: "Projeto piloto", href: officialLinks.preAceleracaoStartups },
 	{ id: "inovapatos", title: "InovaPatos", text: "Política municipal que estabelece medidas de incentivo e apoio à ciência, tecnologia e inovação.", status: "Conheça na cartilha", href: "/programas/inovapatos" },
 	{ id: "acelerapatos", title: "AceleraPatos", text: "Incentivos municipais para empresas de ciência, tecnologia e inovação que se instalam em Patos.", status: "Conheça na cartilha", href: "/programas/acelerapatos" },
 	{ id: "proinova", title: "ProInova", text: "Apoio ao inventor independente que já comprove o depósito de um pedido de patente.", status: "Conheça na cartilha", href: "/programas/proinova" },
@@ -162,6 +167,34 @@ export const programDetails = {
 		period: "Conforme o edital ou chamada pública.",
 		sourceHref: officialLinks.cartilha,
 		faq: [{ question: "Como o PICTI se relaciona ao InovaPatos?", answer: "O PICTI está previsto dentro da política do InovaPatos, conforme a Cartilha da Inovação." }],
+	},
+	"pre-aceleracao-startups": {
+		title: "Projeto Piloto de Pré-Aceleração de Startups de Patos",
+		summary: "Jornada prática e objetiva para apoiar até 10 startups ou projetos inovadores com diagnóstico, mentorias, desenvolvimento de negócios e conexão com oportunidades.",
+		audience: "Startups em estágio inicial, empreendedores com projetos inovadores, projetos acadêmicos com potencial de negócio e equipes com soluções, produtos ou serviços inovadores.",
+		offers: ["Diagnóstico inicial", "Mentorias direcionadas", "Desenvolvimento do modelo de negócio", "Aprimoramento da solução ou MVP", "Preparação de pitch", "Conexão com parceiros e oportunidades"],
+		participation: "O projeto prevê seleção de até 10 participantes. Consulte o documento do projeto para acompanhar as orientações de divulgação, inscrição e mobilização.",
+		documents: "Consulte as orientações da seleção e os requisitos divulgados pela CiTI-DE e pelo Ecossistema Farol Digital.",
+		period: "Duração aproximada de 8 semanas, com início previsto em 15 de outubro de 2026 e encerramento previsto para 10 de dezembro de 2026. O cronograma pode sofrer ajustes.",
+		sourceHref: officialLinks.preAceleracaoDocumento,
+		partner: "Prefeitura Municipal de Patos — CITI-DE, em parceria com o Ecossistema Farol Digital.",
+		goals: ["Selecionar até 10 startups", "Diagnosticar 100% dos participantes", "Garantir mentorias para todas as startups", "Realizar encontros de desenvolvimento dos negócios", "Realizar 1 Pitch Day ou Demo Day", "Conectar startups a parceiros e oportunidades de continuidade"],
+		timeline: [
+			{ period: "15 a 22 de outubro de 2026", activity: "Divulgação, inscrições e mobilização das startups" },
+			{ period: "23 a 29 de outubro de 2026", activity: "Seleção das 10 startups e diagnóstico inicial" },
+			{ period: "30 de outubro a 5 de novembro de 2026", activity: "Mentorias iniciais e definição das prioridades de cada startup" },
+			{ period: "6 a 12 de novembro de 2026", activity: "Encontro 1 — Problema, solução, cliente e proposta de valor" },
+			{ period: "13 a 19 de novembro de 2026", activity: "Encontro 2 — Modelo de negócio, produto e MVP" },
+			{ period: "20 a 26 de novembro de 2026", activity: "Encontro 3 — Mercado, posicionamento e estratégia comercial" },
+			{ period: "27 de novembro a 3 de dezembro de 2026", activity: "Ajustes dos negócios e preparação dos pitches" },
+			{ period: "4 a 9 de dezembro de 2026", activity: "Preparação final e conexões" },
+			{ period: "10 de dezembro de 2026", activity: "Pitch Day / Demo Day e encerramento" },
+		],
+		faq: [
+			{ question: "Quantas startups serão selecionadas?", answer: "Serão selecionadas até 10 startups ou projetos inovadores." },
+			{ question: "Quais são as etapas da jornada?", answer: "Seleção e diagnóstico, mentorias, desenvolvimento do negócio e Pitch Final com conexões." },
+			{ question: "O cronograma é definitivo?", answer: "Não. O documento informa que o cronograma poderá sofrer ajustes conforme a disponibilidade de parceiros, mentores e participantes." },
+		],
 	},
 };
 
@@ -258,7 +291,7 @@ export const hubFaqs = [
 ] as const;
 
 export const hubOpportunityLinks = [
-	{ label: "VisitePB", href: officialLinks.visitePb },
+	{ label: "Pré-aceleração de Startups", href: officialLinks.preAceleracaoStartups },
 	{ label: "Patos Startup", href: officialLinks.patosStartup },
 	{ label: "Cursos CiTI-DE & SENAC", href: "https://cursos.citide.patos.pb.gov.br/" },
 	{ label: "Conhecer os programas", href: officialLinks.cartilha },
