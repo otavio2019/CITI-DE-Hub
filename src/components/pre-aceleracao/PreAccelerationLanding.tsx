@@ -9,7 +9,7 @@ export default function PreAccelerationLanding({ project }: { project: Project }
     <main className="preaccel-page">
       <section className="preaccel-hero">
         <div className="preaccel-container">
-          <Link href="/#oportunidades" className="preaccel-back">← Voltar para o Hub</Link>
+          <Link href="/" className="preaccel-back">← Voltar para CiTI-DE</Link>
           <div className="preaccel-hero-grid">
             <div>
               <p className="preaccel-eyebrow">Projeto piloto · CITI-DE + Farol Digital</p>

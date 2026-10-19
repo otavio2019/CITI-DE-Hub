@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CiTI-DE Hub | Inovação que aproxima",
-  description: "Serviços, programas e oportunidades de ciência, tecnologia, inovação e desenvolvimento em Patos.",
+  title: "CiTI-DE | Ciência, Tecnologia e Inovação em Patos",
+  description: "Programas, serviços, oportunidades e políticas públicas de ciência, tecnologia, inovação e desenvolvimento econômico em Patos.",
   icons: { icon: "/icons/logo.png" },
 };
 
