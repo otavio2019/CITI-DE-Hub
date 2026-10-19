@@ -6,7 +6,6 @@ import { HighlightsStripSection } from "@/components/sections/HighlightsStripSec
 import { NewsSection } from "@/components/sections/NewsSection";
 import { PortalFooter } from "@/components/sections/PortalFooter";
 import { ProgramsSection } from "@/components/sections/ProgramsSection";
-import { PatosPixelSection } from "@/components/sections/PatosPixelSection";
 import { QuickAccessSection } from "@/components/sections/QuickAccessSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { StatsSection } from "@/components/sections/StatsSection";
@@ -16,7 +15,7 @@ import { StatsSection } from "@/components/sections/StatsSection";
 /* 1. Destaques                                                               */
 /* 2. Sobre                                                                   */
 /* 3. Acesso rápido                                                           */
-/* 4. Patos pixel / novidades / públicos                                      */
+/* 4. Novidades / públicos                                                     */
 /* 5. Serviços / programas / FAQ / contato / stats / rodapé                   */
 /* -------------------------------------------------------------------------- */
 export function PortalSections() {
@@ -31,9 +30,8 @@ export function PortalSections() {
 			{/* 3) Atalhos de ação rápida */}
 			<QuickAccessSection />
 
-			{/* 4) Identidade local e notícias */}
-			<PatosPixelSection />
-			<NewsSection />
+				{/* 4) Notícias */}
+				<NewsSection />
 
 			{/* 5) Jornada por público */}
 			<AudienceSection />

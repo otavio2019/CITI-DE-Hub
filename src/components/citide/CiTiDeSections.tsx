@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FiArrowUpRight, FiBriefcase, FiCheck, FiGlobe, FiMail, FiMapPin, FiUsers, FiZap } from "react-icons/fi";
 import { institutionalBodies, programs, services } from "@/lib/hub-content";
 
@@ -8,13 +7,6 @@ const quickLinks = [
   { label: "Sala do Empreendedor", href: "https://citide.patos.pb.gov.br/sala-do-empreendedor", icon: FiUsers },
   { label: "AceleraPatos", href: "https://citide.patos.pb.gov.br/cartilha#acelerapatos", icon: FiZap },
   { label: "Cartilha da Inovação", href: "https://citide.patos.pb.gov.br/cartilha", icon: FiGlobe },
-];
-
-const pixelPlaces = [
-  ["Cruz da Menina", "/images/patos-pixel/cruz-da-menina.png"],
-  ["Catedral Nossa Senhora da Guia", "/images/patos-pixel/catedral-nossa-senhora-da-guia.png"],
-  ["Igreja Nossa Senhora da Conceição", "/images/patos-pixel/igreja-nossa-senhora-da-conceicao.png"],
-  ["Mercado Público", "/images/patos-pixel/mercado-publico.png"],
 ];
 
 export function CiTiDeSections() {
@@ -27,10 +19,8 @@ export function CiTiDeSections() {
 
     <section id="programas" className="citide-section citide-programs-section"><div className="citide-container"><div className="citide-section-heading"><span>04 · Programas</span><h2>Iniciativas para inovar, empreender e desenvolver.</h2></div><div className="citide-program-list">{programs.map((program) => <a key={program.id} href={program.href} className="citide-program-row"><span>{program.title}</span><p>{program.text}</p><FiArrowUpRight /></a>)}</div></div></section>
 
-    <section id="patos-em-pixels" className="citide-section citide-pixel-section"><div className="citide-container"><div className="citide-section-heading citide-light-heading"><span>05 · Identidade local</span><h2>Patos em pixels.</h2></div><div className="citide-pixel-grid">{pixelPlaces.map(([title, image]) => <article key={title}><Image src={image} alt={title} fill sizes="(min-width: 1024px) 25vw, 50vw" /><strong>{title}</strong></article>)}</div></div></section>
+    <section id="contato" className="citide-section citide-contact-section"><div className="citide-container citide-contact-grid"><div><div className="citide-section-heading"><span>05 · Atendimento</span><h2>Precisa de orientação?</h2></div><p className="citide-muted">Entre em contato com a equipe da CiTI-DE para encontrar o programa ou serviço adequado para sua demanda.</p><a className="citide-contact-button" href="mailto:citi-de@patos.pb.gov.br?subject=Solicitação de orientação"><FiMail /> Enviar uma dúvida <FiArrowUpRight /></a></div><div className="citide-contact-details"><div><FiMail /><span>citi-de@patos.pb.gov.br</span></div><div><FiMapPin /><span>Avenida Vidal de Negreiros, 84 - Centro, Patos - PB</span></div><div><FiUsers /><span>Atendimento: 08:00 às 14:00</span></div></div></div></section>
 
-    <section id="contato" className="citide-section citide-contact-section"><div className="citide-container citide-contact-grid"><div><div className="citide-section-heading"><span>06 · Atendimento</span><h2>Precisa de orientação?</h2></div><p className="citide-muted">Entre em contato com a equipe da CiTI-DE para encontrar o programa ou serviço adequado para sua demanda.</p><a className="citide-contact-button" href="mailto:citi-de@patos.pb.gov.br?subject=Solicitação de orientação"><FiMail /> Enviar uma dúvida <FiArrowUpRight /></a></div><div className="citide-contact-details"><div><FiMail /><span>citi-de@patos.pb.gov.br</span></div><div><FiMapPin /><span>Avenida Vidal de Negreiros, 84 - Centro, Patos - PB</span></div><div><FiUsers /><span>Atendimento: 08:00 às 14:00</span></div></div></div></section>
-
-    <footer className="citide-footer"><div className="citide-container"><strong>CiTI-DE</strong><span>Ciência, Tecnologia, Inovação e Desenvolvimento Econômico · Patos - PB</span><a href="https://citide.patos.pb.gov.br/">Portal oficial <FiArrowUpRight /></a></div></footer>
+    <footer className="citide-footer"><div className="citide-container"><div className="citide-footer-brand"><strong>CiTI-DE</strong><span>Secretaria de Ciência, Tecnologia, Inovação e Desenvolvimento Econômico · Patos - PB</span><small>Formula e executa políticas públicas que conectam pessoas, empresas e instituições às oportunidades de desenvolvimento local.</small></div><a href="https://citide.patos.pb.gov.br/">Portal oficial <FiArrowUpRight /></a></div></footer>
   </>;
 }
