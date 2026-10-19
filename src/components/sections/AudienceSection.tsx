@@ -9,7 +9,7 @@ export function AudienceSection() {
 	const selectedAudience = audiencePaths[audience];
 
 	return (
-		<section id="publicos" className="bg-transparent px-5 py-20 text-white">
+			<section id="publicos" className="citide-audience-section bg-transparent px-5 py-20 text-white">
 			<div className="mx-auto max-w-6xl">
 				{/* Introdução explica por que o visitante deve escolher um perfil. */}
 				<div className="max-w-2xl">

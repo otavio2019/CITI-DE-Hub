@@ -1,5 +1,7 @@
-import { FiArrowUpRight, FiBookOpen, FiBriefcase, FiCheck, FiClock, FiGlobe, FiMail, FiMapPin, FiUsers, FiZap } from "react-icons/fi";
+import Image from "next/image";
+import { FiArrowUpRight, FiBookOpen, FiBriefcase, FiCheck, FiClock, FiGlobe, FiInstagram, FiMail, FiMapPin, FiUsers, FiZap } from "react-icons/fi";
 import { contactInfo, institutionalBodies, officialLinks, programLinks, programs, serviceLinks, services } from "@/lib/hub-content";
+import { AudienceSection } from "@/components/sections/AudienceSection";
 
 const quickLinks = [
   { label: "Cursos e capacitações", href: serviceLinks.find((link) => link.label === "Cursos CiTI-DE & SENAC")?.href ?? "#", icon: FiGlobe },
@@ -17,6 +19,8 @@ export function CiTiDeSections() {
 
     <section id="sobre" className="citide-section citide-about-section"><div className="citide-container citide-about-grid"><div><div className="citide-section-heading"><span>02 · Sobre a CiTI-DE</span><h2>Política pública que aproxima ideias e oportunidades.</h2></div><p className="citide-big-copy">A CiTI-DE formula e executa políticas de ciência, tecnologia, inovação e desenvolvimento econômico em Patos.</p><p className="citide-muted">A secretaria conecta empresas, inventores, instituições de ensino e cidadãos aos caminhos que ajudam projetos e negócios a avançar.</p></div><div className="citide-bodies">{institutionalBodies.map((body) => <article key={body.title}><FiCheck /><div><h3>{body.title}</h3><p>{body.text}</p></div></article>)}</div></div></section>
 
+    <AudienceSection />
+
     <section id="servicos" className="citide-section citide-dark-section"><div className="citide-container"><div className="citide-section-heading citide-light-heading"><span>03 · Serviços</span><h2>Ajuda prática para o próximo passo.</h2></div><div className="citide-card-grid">{services.slice(0, 6).map((service) => <a key={service.id} id={service.id} href={service.href} className="citide-info-card"><small>{service.status}</small><h3>{service.title}</h3><p>{service.text}</p><FiArrowUpRight /></a>)}</div></div></section>
 
     <section id="programas" className="citide-section citide-programs-section"><div className="citide-container"><div className="citide-section-heading"><span>04 · Programas</span><h2>Iniciativas para inovar, empreender e desenvolver.</h2><a className="citide-section-link" href={officialLinks.cartilha}>Ver cartilha completa <FiArrowUpRight /></a></div><div className="citide-program-list">{programs.map((program) => <a key={program.id} href={programOfficialLinks.get(program.title) ?? program.href} className="citide-program-row"><span>{program.title}</span><p>{program.text}</p><FiArrowUpRight /></a>)}</div></div></section>
@@ -27,7 +31,7 @@ export function CiTiDeSections() {
       <div className="citide-container">
         <div className="citide-footer-intro">
           <p className="citide-footer-kicker">Secretaria municipal</p>
-          <div className="citide-footer-brand"><strong>CiTI-DE</strong><span>Ciência, Tecnologia, Inovação e Desenvolvimento Econômico · Patos - PB</span><small>Formula e executa políticas públicas que conectam pessoas, empresas e instituições às oportunidades de desenvolvimento local.</small></div>
+          <div className="citide-footer-brand"><Image src="/icons/logo.png" alt="Logo CiTI-DE" width={48} height={48} className="citide-footer-logo" /><strong>CiTI-DE</strong><span>Ciência, Tecnologia, Inovação e Desenvolvimento Econômico · Patos - PB</span><small>Formula e executa políticas públicas que conectam pessoas, empresas e instituições às oportunidades de desenvolvimento local.</small></div>
         </div>
         <div className="citide-footer-panel">
           <p className="citide-footer-label">Atendimento</p>
@@ -40,6 +44,8 @@ export function CiTiDeSections() {
           <a href={officialLinks.portal}>Portal CiTI-DE <FiArrowUpRight /></a>
           <a href={officialLinks.cartilha}><FiBookOpen aria-hidden="true" /> Cartilha da Inovação <FiArrowUpRight /></a>
           <a href={contactInfo.portalPrefeitura}>Portal da Prefeitura <FiArrowUpRight /></a>
+          <a href={contactInfo.instagramCiti}><FiInstagram aria-hidden="true" /> Instagram CiTI-DE <FiArrowUpRight /></a>
+          <a href={contactInfo.instagramPrefeitura}><FiInstagram aria-hidden="true" /> Instagram Prefeitura <FiArrowUpRight /></a>
         </div>
       </div>
       <div className="citide-footer-bottom citide-container"><span>© Prefeitura de Patos · Todos os direitos reservados.</span><span>Portal institucional de ciência, tecnologia e inovação.</span></div>
