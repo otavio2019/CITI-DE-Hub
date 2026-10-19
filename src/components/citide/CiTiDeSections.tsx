@@ -1,5 +1,5 @@
-import { FiArrowUpRight, FiBriefcase, FiCheck, FiGlobe, FiMail, FiMapPin, FiUsers, FiZap } from "react-icons/fi";
-import { institutionalBodies, officialLinks, programLinks, programs, serviceLinks, services } from "@/lib/hub-content";
+import { FiArrowUpRight, FiBookOpen, FiBriefcase, FiCheck, FiClock, FiGlobe, FiMail, FiMapPin, FiUsers, FiZap } from "react-icons/fi";
+import { contactInfo, institutionalBodies, officialLinks, programLinks, programs, serviceLinks, services } from "@/lib/hub-content";
 
 const quickLinks = [
   { label: "Cursos e capacitações", href: serviceLinks.find((link) => link.label === "Cursos CiTI-DE & SENAC")?.href ?? "#", icon: FiGlobe },
@@ -23,6 +23,26 @@ export function CiTiDeSections() {
 
     <section id="contato" className="citide-section citide-contact-section"><div className="citide-container citide-contact-grid"><div><div className="citide-section-heading"><span>05 · Atendimento</span><h2>Precisa de orientação?</h2></div><p className="citide-muted">Entre em contato com a equipe da CiTI-DE para encontrar o programa ou serviço adequado para sua demanda.</p><a className="citide-contact-button" href="mailto:citi-de@patos.pb.gov.br?subject=Solicitação de orientação"><FiMail /> Enviar uma dúvida <FiArrowUpRight /></a></div><div className="citide-contact-details"><div><FiMail /><span>citi-de@patos.pb.gov.br</span></div><div><FiMapPin /><span>Avenida Vidal de Negreiros, 84 - Centro, Patos - PB</span></div><div><FiUsers /><span>Atendimento: 08:00 às 14:00</span></div></div></div></section>
 
-    <footer className="citide-footer"><div className="citide-container"><div className="citide-footer-brand"><strong>CiTI-DE</strong><span>Secretaria de Ciência, Tecnologia, Inovação e Desenvolvimento Econômico · Patos - PB</span><small>Formula e executa políticas públicas que conectam pessoas, empresas e instituições às oportunidades de desenvolvimento local.</small></div><a href="https://citide.patos.pb.gov.br/">Portal oficial <FiArrowUpRight /></a></div></footer>
+    <footer className="citide-footer">
+      <div className="citide-container">
+        <div className="citide-footer-intro">
+          <p className="citide-footer-kicker">Secretaria municipal</p>
+          <div className="citide-footer-brand"><strong>CiTI-DE</strong><span>Ciência, Tecnologia, Inovação e Desenvolvimento Econômico · Patos - PB</span><small>Formula e executa políticas públicas que conectam pessoas, empresas e instituições às oportunidades de desenvolvimento local.</small></div>
+        </div>
+        <div className="citide-footer-panel">
+          <p className="citide-footer-label">Atendimento</p>
+          <div className="citide-footer-detail"><FiMapPin aria-hidden="true" /><span>{contactInfo.address}</span></div>
+          <div className="citide-footer-detail"><FiClock aria-hidden="true" /><span>{contactInfo.hours}</span></div>
+          <a className="citide-footer-detail" href={`mailto:${contactInfo.email}`}><FiMail aria-hidden="true" /><span>{contactInfo.email}</span></a>
+        </div>
+        <div className="citide-footer-links">
+          <p className="citide-footer-label">Acesso oficial</p>
+          <a href={officialLinks.portal}>Portal CiTI-DE <FiArrowUpRight /></a>
+          <a href={officialLinks.cartilha}><FiBookOpen aria-hidden="true" /> Cartilha da Inovação <FiArrowUpRight /></a>
+          <a href={contactInfo.portalPrefeitura}>Portal da Prefeitura <FiArrowUpRight /></a>
+        </div>
+      </div>
+      <div className="citide-footer-bottom citide-container"><span>© Prefeitura de Patos · Todos os direitos reservados.</span><span>Portal institucional de ciência, tecnologia e inovação.</span></div>
+    </footer>
   </>;
 }
