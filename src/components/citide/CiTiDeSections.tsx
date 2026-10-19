@@ -1,13 +1,15 @@
 import { FiArrowUpRight, FiBriefcase, FiCheck, FiGlobe, FiMail, FiMapPin, FiUsers, FiZap } from "react-icons/fi";
-import { institutionalBodies, programs, services } from "@/lib/hub-content";
+import { institutionalBodies, officialLinks, programLinks, programs, serviceLinks, services } from "@/lib/hub-content";
 
 const quickLinks = [
-  { label: "Cursos e capacitações", href: "https://cursos.citide.patos.pb.gov.br/", icon: FiGlobe },
-  { label: "Patos + Empregos", href: "https://patos.pb.gov.br/", icon: FiBriefcase },
-  { label: "Sala do Empreendedor", href: "https://citide.patos.pb.gov.br/sala-do-empreendedor", icon: FiUsers },
-  { label: "AceleraPatos", href: "https://citide.patos.pb.gov.br/cartilha#acelerapatos", icon: FiZap },
-  { label: "Cartilha da Inovação", href: "https://citide.patos.pb.gov.br/cartilha", icon: FiGlobe },
+  { label: "Cursos e capacitações", href: serviceLinks.find((link) => link.label === "Cursos CiTI-DE & SENAC")?.href ?? "#", icon: FiGlobe },
+  { label: "Patos + Empregos", href: officialLinks.empregos, icon: FiBriefcase },
+  { label: "Sala do Empreendedor", href: serviceLinks.find((link) => link.label === "Sala do Empreendedor")?.href ?? "#", icon: FiUsers },
+  { label: "AceleraPatos", href: officialLinks.aceleraPatos, icon: FiZap },
+  { label: "Cartilha da Inovação", href: officialLinks.cartilha, icon: FiGlobe },
 ];
+
+const programOfficialLinks = new Map(programLinks.map((program) => [program.label, program.href]));
 
 export function CiTiDeSections() {
   return <>
@@ -17,7 +19,7 @@ export function CiTiDeSections() {
 
     <section id="servicos" className="citide-section citide-dark-section"><div className="citide-container"><div className="citide-section-heading citide-light-heading"><span>03 · Serviços</span><h2>Ajuda prática para o próximo passo.</h2></div><div className="citide-card-grid">{services.slice(0, 6).map((service) => <a key={service.id} id={service.id} href={service.href} className="citide-info-card"><small>{service.status}</small><h3>{service.title}</h3><p>{service.text}</p><FiArrowUpRight /></a>)}</div></div></section>
 
-    <section id="programas" className="citide-section citide-programs-section"><div className="citide-container"><div className="citide-section-heading"><span>04 · Programas</span><h2>Iniciativas para inovar, empreender e desenvolver.</h2></div><div className="citide-program-list">{programs.map((program) => <a key={program.id} href={program.href} className="citide-program-row"><span>{program.title}</span><p>{program.text}</p><FiArrowUpRight /></a>)}</div></div></section>
+    <section id="programas" className="citide-section citide-programs-section"><div className="citide-container"><div className="citide-section-heading"><span>04 · Programas</span><h2>Iniciativas para inovar, empreender e desenvolver.</h2><a className="citide-section-link" href={officialLinks.cartilha}>Ver cartilha completa <FiArrowUpRight /></a></div><div className="citide-program-list">{programs.map((program) => <a key={program.id} href={programOfficialLinks.get(program.title) ?? program.href} className="citide-program-row"><span>{program.title}</span><p>{program.text}</p><FiArrowUpRight /></a>)}</div></div></section>
 
     <section id="contato" className="citide-section citide-contact-section"><div className="citide-container citide-contact-grid"><div><div className="citide-section-heading"><span>05 · Atendimento</span><h2>Precisa de orientação?</h2></div><p className="citide-muted">Entre em contato com a equipe da CiTI-DE para encontrar o programa ou serviço adequado para sua demanda.</p><a className="citide-contact-button" href="mailto:citi-de@patos.pb.gov.br?subject=Solicitação de orientação"><FiMail /> Enviar uma dúvida <FiArrowUpRight /></a></div><div className="citide-contact-details"><div><FiMail /><span>citi-de@patos.pb.gov.br</span></div><div><FiMapPin /><span>Avenida Vidal de Negreiros, 84 - Centro, Patos - PB</span></div><div><FiUsers /><span>Atendimento: 08:00 às 14:00</span></div></div></div></section>
 
