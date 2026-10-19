@@ -31,7 +31,6 @@ export function PatosPixelSection() {
 				<div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
 					<div>
 						<SectionHeader eyebrow="Identidade local" title="Patos em pixels" />
-						<p className="mt-4 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">A tecnologia também conta histórias. Conheça lugares que fazem parte da identidade de Patos em uma linguagem visual inspirada no próprio universo do CiTI-DE.</p>
 					</div>
 					<span className="w-fit rounded-full border border-[var(--citi-yellow)]/60 bg-[var(--citi-yellow)]/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-[var(--citi-yellow-soft)]">Cultura + tecnologia</span>
 				</div>
@@ -51,4 +50,3 @@ export function PatosPixelSection() {
 }
 
 export default PatosPixelSection;
-

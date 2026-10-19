@@ -35,10 +35,10 @@ Abra [http://localhost:3000](http://localhost:3000).
 npm ci
 npm run lint
 npm run build
-npm start
+node .next/standalone/server.js
 ```
 
-A aplicação de produção ficará disponível em [http://localhost:3000](http://localhost:3000).
+A aplicação de produção ficará disponível em [http://localhost:3000](http://localhost:3000). Como o projeto usa a saída `standalone`, o servidor deve ser iniciado com `node .next/standalone/server.js` após o build.
 
 ## Executar com Docker
 
