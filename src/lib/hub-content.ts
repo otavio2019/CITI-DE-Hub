@@ -6,7 +6,7 @@ export const navigationLinks = [
 ];
 
 export const officialLinks = {
-	portal: "https://citide.patos.pb.gov.br/",
+	portal: "https://citide.patos.pb.gov.br/painel/login",
 	cartilha: "https://citide.patos.pb.gov.br/cartilha",
 	inovaPatos: "https://citide.patos.pb.gov.br/cartilha#inovapatos",
 	aceleraPatos: "https://citide.patos.pb.gov.br/cartilha#acelerapatos",
