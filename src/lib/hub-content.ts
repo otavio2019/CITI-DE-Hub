@@ -16,18 +16,25 @@ export const officialLinks = {
 	visitePb: "https://visitepb.com.br/",
 	patosStartup: "https://citide.patos.pb.gov.br/patos-startup",
 	torneioRobotica: "https://citide.patos.pb.gov.br/torneio-de-robotica",
+	inscricaoTjr: "https://citide.patos.pb.gov.br/torneio-de-robotica-patos",
+	feiraNatalina: "https://citide.patos.pb.gov.br/feira-natalina",
 	vitrineStartups: "https://citide.patos.pb.gov.br/vitrine",
 	preAceleracaoStartups: "/programas/pre-aceleracao-startups",
 	seloInovacao: "https://citide.patos.pb.gov.br/cartilha#reconhecimento",
 } as const;
 
 export const serviceLinks = [
+	{ label: "Patos Startup (Edital 013/2026)", href: officialLinks.patosStartup },
+	{ label: "Torneio de Robótica (TJR)", href: officialLinks.torneioRobotica },
+	{ label: "Inscrição TJR — Etapa Patos", href: officialLinks.inscricaoTjr },
+	{ label: "Edital — Feira Natalina (Encerrado)", href: officialLinks.feiraNatalina },
+	{ label: "Startups de Patos", href: officialLinks.vitrineStartups },
 	{ label: "Cursos CiTI-DE & SENAC", href: "https://cursos.citide.patos.pb.gov.br/" },
 	{ label: "Sala do Empreendedor", href: "https://citide.patos.pb.gov.br/sala-do-empreendedor" },
 	{ label: "Mapeamento dos Artesãos", href: "https://citide.patos.pb.gov.br/mapeamento-artesoes" },
-	{ label: "Edital - Feira Mãos que Criam", href: "https://citide.patos.pb.gov.br/edital-feira-maos-que-criam" },
-	{ label: "Para Cidadãos", href: "https://citide.patos.pb.gov.br/#servicos-cidadao" },
-	{ label: "Para Empresas", href: "https://citide.patos.pb.gov.br/#servicos-empresa" },
+	{ label: "Edital — Feira Mãos que Criam (Encerrado)", href: "https://citide.patos.pb.gov.br/edital-feira-maos-que-criam" },
+	{ label: "Para Cidadãos", href: "#publicos" },
+	{ label: "Para Empresas", href: "#publicos" },
 	{ label: "Cartilha da Inovação", href: officialLinks.cartilha },
 ];
 
