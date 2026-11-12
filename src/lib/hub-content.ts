@@ -68,11 +68,11 @@ export const quickAccessLinks = [
 
 // O portal oficial não expõe um feed de notícias; o carrossel usa chamadas e páginas confirmadas na home oficial.
 export const officialHighlights = [
-	{ id: "visite-pb", category: "Turismo e inovação", title: "Visite PB — Guia Turístico Oficial & Passaporte PB", summary: "Descubra pontos turísticos, eventos, gastronomia e comércio local em uma plataforma georreferenciada.", href: officialLinks.visitePb },
-	{ id: "cursos-senac", category: "Capacitação", title: "Cursos e Capacitações Gratuitas", summary: "Encontre oportunidades de qualificação profissional em parceria com o CiTI-DE e o SENAC.", href: "https://cursos.citide.patos.pb.gov.br/" },
-	{ id: "cartilha-inovacao", category: "Programas públicos", title: "Cartilha da Inovação", summary: "Conheça as leis municipais e os programas de ciência, tecnologia e inovação de Patos.", href: officialLinks.cartilha },
-	{ id: "acelerapatos-destaque", category: "Desenvolvimento econômico", title: "AceleraPatos", summary: "Consulte os benefícios e caminhos para empresas de ciência, tecnologia e inovação em Patos.", href: officialLinks.aceleraPatos },
-	{ id: "vitrine-startups-destaque", category: "Ecossistema local", title: "Vitrine de Startups", summary: "Conheça negócios inovadores e tecnologias que nasceram no ecossistema de Patos.", href: officialLinks.vitrineStartups },
+	{ id: "visite-pb", category: "Turismo e inovação", title: "Visite PB — Guia Turístico Oficial & Passaporte PB", summary: "Descubra pontos turísticos, eventos, gastronomia e comércio local em uma plataforma georreferenciada.", href: officialLinks.visitePb, image: "/images/highlights/visitepb.png", imageAlt: "Prévia da plataforma Visite PB" },
+	{ id: "cursos-senac", category: "Capacitação", title: "Cursos e Capacitações Gratuitas", summary: "Encontre oportunidades de qualificação profissional em parceria com o CiTI-DE e o SENAC.", href: "https://cursos.citide.patos.pb.gov.br/", image: "/images/sobre-pessoa-inovacao.png", imageAlt: "Ilustração sobre inovação e capacitação" },
+	{ id: "cartilha-inovacao", category: "Programas públicos", title: "Cartilha da Inovação", summary: "Conheça as leis municipais e os programas de ciência, tecnologia e inovação de Patos.", href: officialLinks.cartilha, image: "/images/sol 2.png", imageAlt: "Elemento visual amarelo da identidade CiTI-DE" },
+	{ id: "acelerapatos-destaque", category: "Desenvolvimento econômico", title: "AceleraPatos", summary: "Consulte os benefícios e caminhos para empresas de ciência, tecnologia e inovação em Patos.", href: officialLinks.aceleraPatos, image: "/images/pato.png", imageAlt: "Ilustração de Patos" },
+	{ id: "vitrine-startups-destaque", category: "Ecossistema local", title: "Vitrine de Startups", summary: "Conheça negócios inovadores e tecnologias que nasceram no ecossistema de Patos.", href: officialLinks.vitrineStartups, image: "/images/robou_dando_chau.webp", imageAlt: "Robô ilustrando o ecossistema de tecnologia" },
 ];
 
 export const opportunities = [

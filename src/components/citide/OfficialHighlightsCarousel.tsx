@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 import { officialHighlights } from "@/lib/hub-content";
 
@@ -66,6 +67,9 @@ export function OfficialHighlightsCarousel() {
 					>
 						{officialHighlights.map((highlight) => (
 							<article className="citide-news-card" key={highlight.id}>
+								<div className="citide-news-image-wrap">
+									<Image src={highlight.image} alt={highlight.imageAlt} fill sizes="(max-width: 700px) 100vw, 42vw" className="citide-news-image" />
+								</div>
 								<div>
 									<span className="citide-news-category">{highlight.category}</span>
 									<h3>{highlight.title}</h3>
