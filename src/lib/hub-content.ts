@@ -66,6 +66,15 @@ export const quickAccessLinks = [
 	{ id: "selo", label: "Selo Patos Inovação", href: officialLinks.seloInovacao },
 ];
 
+// O portal oficial não expõe um feed de notícias; o carrossel usa chamadas e páginas confirmadas na home oficial.
+export const officialHighlights = [
+	{ id: "visite-pb", category: "Turismo e inovação", title: "Visite PB — Guia Turístico Oficial & Passaporte PB", summary: "Descubra pontos turísticos, eventos, gastronomia e comércio local em uma plataforma georreferenciada.", href: officialLinks.visitePb },
+	{ id: "cursos-senac", category: "Capacitação", title: "Cursos e Capacitações Gratuitas", summary: "Encontre oportunidades de qualificação profissional em parceria com o CiTI-DE e o SENAC.", href: "https://cursos.citide.patos.pb.gov.br/" },
+	{ id: "cartilha-inovacao", category: "Programas públicos", title: "Cartilha da Inovação", summary: "Conheça as leis municipais e os programas de ciência, tecnologia e inovação de Patos.", href: officialLinks.cartilha },
+	{ id: "acelerapatos-destaque", category: "Desenvolvimento econômico", title: "AceleraPatos", summary: "Consulte os benefícios e caminhos para empresas de ciência, tecnologia e inovação em Patos.", href: officialLinks.aceleraPatos },
+	{ id: "vitrine-startups-destaque", category: "Ecossistema local", title: "Vitrine de Startups", summary: "Conheça negócios inovadores e tecnologias que nasceram no ecossistema de Patos.", href: officialLinks.vitrineStartups },
+];
+
 export const opportunities = [
 	{ id: "pre-aceleracao-startups", category: "Startup", date: "15/10 a 10/12/2026", title: "Projeto Piloto de Pré-Aceleração de Startups", summary: "Jornada prática para até 10 startups ou projetos inovadores de Patos, em parceria com o Ecossistema Farol Digital.", status: "projeto piloto", href: officialLinks.preAceleracaoStartups },
 	{ id: "patos-startup", category: "Startup", date: "Edital 013/2026", title: "Patos Startup", summary: "Consulte o edital e as orientações oficiais para participar.", status: "consulte o edital", href: officialLinks.patosStartup },
