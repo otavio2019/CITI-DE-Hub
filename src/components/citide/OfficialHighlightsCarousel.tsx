@@ -66,7 +66,7 @@ export function OfficialHighlightsCarousel() {
 						style={{ transform: `translateX(-${activeIndex * 100}%)` }}
 					>
 						{officialHighlights.map((highlight) => (
-							<article className="citide-news-card" key={highlight.id}>
+							<a className="citide-news-card" key={highlight.id} href={highlight.href} target="_blank" rel="noreferrer">
 								<div className="citide-news-image-wrap">
 									<Image src={highlight.image} alt={highlight.imageAlt} fill sizes="(max-width: 700px) 100vw, 42vw" className="citide-news-image" />
 								</div>
@@ -75,10 +75,10 @@ export function OfficialHighlightsCarousel() {
 									<h3>{highlight.title}</h3>
 									<p>{highlight.summary}</p>
 								</div>
-								<a href={highlight.href} target="_blank" rel="noreferrer">
+								<span className="citide-news-link">
 									Acessar conteúdo oficial <FiArrowUpRight aria-hidden="true" />
-								</a>
-							</article>
+								</span>
+							</a>
 						))}
 					</div>
 				</div>

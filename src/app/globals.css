@@ -92,3 +92,11 @@
 .citide-news-card>div:nth-child(2) a{margin-top:24px}
 @media(max-width:700px){.citide-news-card{display:flex;gap:23px}.citide-news-image-wrap{min-height:180px;height:180px;order:0}.citide-news-card>div:nth-child(2){order:1}.citide-news-card>div:nth-child(2) h3{margin-top:15px}}
 @media(prefers-reduced-motion:reduce){.citide-news-image{transition:none}}
+
+/* Slides clicáveis e imagens sem corte */
+.citide-news-card{color:#fff;text-decoration:none;cursor:pointer}
+.citide-news-image{object-fit:contain;object-position:center;background:var(--citi-blue-dark)}
+.citide-news-card>div:nth-child(2) .citide-news-link{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;margin-top:24px;color:var(--citi-yellow);font-size:12px;font-weight:700;text-decoration:none}
+.citide-news-card:hover .citide-news-link{color:#fff}
+.citide-news-card:focus-visible{outline:3px solid var(--citi-yellow);outline-offset:5px}
+@media(max-width:700px){.citide-news-card>div:nth-child(2) .citide-news-link{margin-top:20px}}
