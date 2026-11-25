@@ -1,9 +1,7 @@
 // Conteúdo centralizado do portal. Alterações de textos e links devem ser feitas aqui.
 
 export const navigationLinks = [
-	{ label: "Notícias", href: "#noticias" },
 	{ label: "Sobre", href: "#sobre" },
-	{ label: "Cartilha", href: "/cartilha" },
 	
 ];
 

@@ -169,7 +169,7 @@ export function SiteHeader() {
 			</nav>
 
 			<a className="header-cta" href={officialLinks.portal}>
-				Portal oficial <FiArrowUpRight aria-hidden="true" />
+				Acessar o portal <FiArrowUpRight aria-hidden="true" />
 			</a>
 
 			<button
@@ -198,7 +198,7 @@ export function SiteHeader() {
 						<li><a href={resolveHref("#contato")} onClick={closeMenus}>Contato</a></li>
 						<li>
 							<a className="site-mobile-cta" href={officialLinks.portal} onClick={closeMenus}>
-								Portal oficial <FiArrowUpRight aria-hidden="true" />
+								Acessar o portal <FiArrowUpRight aria-hidden="true" />
 							</a>
 						</li>
 					</ul>
