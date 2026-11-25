@@ -230,3 +230,15 @@
 /* Telas internas: fundo com leve gradiente azulado no lugar do branco chapado */
 .page-section{background:linear-gradient(180deg,#edf4fb 0%,#f8fbfe 100%)}
 .page-section.is-alt{background:linear-gradient(180deg,#e1edf8 0%,#f1f8fd 100%)}
+/* Telas internas: degrade azul continuo, branco so nos paineis de conteudo */
+.page-shell{background:radial-gradient(1200px 820px at 84% 0%,rgba(26,160,225,.34),transparent 60%),radial-gradient(900px 700px at 0% 28%,rgba(255,184,0,.05),transparent 55%),radial-gradient(1500px 1000px at 62% 86%,rgba(2,28,46,.55),transparent 70%),linear-gradient(180deg,#05406a 0%,#0867a8 40%,#0a6ba3 70%,#043b60 100%)}
+.page-hero{background:transparent}
+.page-section{background:transparent;border-top:0;padding:32px 0}
+.page-section.is-alt{background:transparent}
+.page-section.is-dark{background:transparent}
+.page-section > .citide-container{background:#fff;padding:42px 46px 44px;box-shadow:0 26px 60px rgba(1,16,29,.32)}
+.page-section.is-dark > .citide-container{background:transparent;padding:46px 0;box-shadow:none}
+.page-section.is-dark > .citide-container .citide-section-heading h2,
+.page-section.is-dark > .citide-container .page-aside{color:#fff}
+@media(max-width:700px){.page-section{padding:18px 0}.page-section > .citide-container{padding:28px 20px 32px}.page-section.is-dark > .citide-container{padding:30px 0}}
+.page-hero:after{background:repeating-linear-gradient(112deg,rgba(255,255,255,.05) 0 80px,rgba(255,255,255,0) 160px 300px);-webkit-mask-image:linear-gradient(100deg,#000 0%,#000 46%,transparent 88%);mask-image:linear-gradient(100deg,#000 0%,#000 46%,transparent 88%)}

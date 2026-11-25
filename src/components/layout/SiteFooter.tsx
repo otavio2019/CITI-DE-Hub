@@ -10,7 +10,6 @@ export function SiteFooter() {
 				<div className="citide-footer-intro">
 					<p className="citide-footer-kicker">Secretaria municipal</p>
 					<div className="citide-footer-brand">
-						<Image src="/icons/logo.png" alt="Logo CiTI-DE" width={48} height={48} className="citide-footer-logo" />
 						<strong>CiTI-DE</strong>
 						<span>Ciência, Tecnologia, Inovação e Desenvolvimento Econômico · Patos - PB</span>
 						<small>
