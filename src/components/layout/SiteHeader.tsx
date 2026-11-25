@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { navigationLinks, officialLinks, programLinks, serviceLinks } from "@/lib/hub-content";
 import { FiArrowUpRight, FiChevronDown, FiChevronUp, FiMenu, FiX } from "react-icons/fi";
@@ -84,10 +86,18 @@ function MobileDropdown({ label, items, open, onToggle, onNavigate }: DropdownPr
 }
 
 export function SiteHeader() {
+	const pathname = usePathname();
+	const isHome = pathname === "/";
 	const [mobileOpen, setMobileOpen] = useState(false);
 	const [programsOpen, setProgramsOpen] = useState(false);
 	const [servicesOpen, setServicesOpen] = useState(false);
 	const headerRef = useRef<HTMLElement>(null);
+
+	// Âncoras só funcionam na home; nas demais rotas elas viram "/#secao".
+	function resolveHref(href: string) {
+		if (!href.startsWith("#")) return href;
+		return isHome ? href : `/${href}`;
+	}
 
 	function closeMenus() {
 		setMobileOpen(false);
@@ -124,7 +134,7 @@ export function SiteHeader() {
 
 	return (
 		<header ref={headerRef} className="hub-header">
-			<a className="brand" href="#inicio" aria-label="CiTI-DE início">
+			<Link className="brand" href="/#inicio" aria-label="CiTI-DE início">
 				<Image src="/icons/logo.png" alt="Logo CiTI-DE" width={48} height={48} priority />
 				<span>
 					<strong>
@@ -132,7 +142,7 @@ export function SiteHeader() {
 					</strong>
 					<small>Ciência · tecnologia · inovação</small>
 				</span>
-			</a>
+			</Link>
 
 			<nav aria-label="Navegação principal" className="hub-nav">
 				<ul className="flex items-center gap-1">
@@ -145,20 +155,20 @@ export function SiteHeader() {
 					</li>
 					{navigationLinks.map((link) => (
 						<li key={link.href}>
-							<a href={link.href} className="rounded-xl px-3 py-3 transition hover:bg-[var(--citi-background)] hover:text-[var(--citi-blue)]">
+							<a href={resolveHref(link.href)} className="rounded-xl px-3 py-3 transition hover:bg-[var(--citi-background)] hover:text-[var(--citi-blue)]">
 								{link.label}
 							</a>
 						</li>
 					))}
 					<li>
-						<a href="#contato" className="rounded-xl px-3 py-3 transition hover:bg-[var(--citi-background)] hover:text-[var(--citi-blue)]">
+						<a href={resolveHref("#contato")} className="rounded-xl px-3 py-3 transition hover:bg-[var(--citi-background)] hover:text-[var(--citi-blue)]">
 							Contato
 						</a>
 					</li>
 				</ul>
 			</nav>
 
-			<a className="header-cta" href={`${officialLinks.portal}painel`}>
+			<a className="header-cta" href={officialLinks.portal}>
 				Portal oficial <FiArrowUpRight aria-hidden="true" />
 			</a>
 
@@ -182,12 +192,12 @@ export function SiteHeader() {
 						</li>
 						{navigationLinks.map((link) => (
 							<li key={link.href}>
-								<a href={link.href} onClick={closeMenus}>{link.label}</a>
+								<a href={resolveHref(link.href)} onClick={closeMenus}>{link.label}</a>
 							</li>
 						))}
-						<li><a href="#contato" onClick={closeMenus}>Contato</a></li>
+						<li><a href={resolveHref("#contato")} onClick={closeMenus}>Contato</a></li>
 						<li>
-							<a className="site-mobile-cta" href={`${officialLinks.portal}painel`} onClick={closeMenus}>
+							<a className="site-mobile-cta" href={officialLinks.portal} onClick={closeMenus}>
 								Portal oficial <FiArrowUpRight aria-hidden="true" />
 							</a>
 						</li>

@@ -1,7 +1,9 @@
 // Conteúdo centralizado do portal. Alterações de textos e links devem ser feitas aqui.
 
 export const navigationLinks = [
+	{ label: "Notícias", href: "#noticias" },
 	{ label: "Sobre", href: "#sobre" },
+	{ label: "Cartilha", href: "/cartilha" },
 	
 ];
 
@@ -35,16 +37,17 @@ export const serviceLinks = [
 	{ label: "Edital — Feira Mãos que Criam (Encerrado)", href: "https://citide.patos.pb.gov.br/edital-feira-maos-que-criam" },
 	{ label: "Para Cidadãos", href: "#publicos" },
 	{ label: "Para Empresas", href: "#publicos" },
-	{ label: "Cartilha da Inovação", href: officialLinks.cartilha },
+	{ label: "Cartilha da Inovação", href: "/cartilha" },
 ];
 
 export const programLinks = [
-	{ label: "InovaPatos", href: officialLinks.inovaPatos },
-	{ label: "AceleraPatos", href: officialLinks.aceleraPatos },
-	{ label: "ProInova", href: officialLinks.proInova },
-	{ label: "Selo Patos Inovação", href: officialLinks.seloInovacao },
-	{ label: "Patos + Empregos", href: officialLinks.empregos },
-	{ label: "PICTI", href: officialLinks.picti },
+	{ label: "InovaPatos", href: "/programas/inovapatos" },
+	{ label: "AceleraPatos", href: "/programas/acelerapatos" },
+	{ label: "ProInova", href: "/programas/proinova" },
+	{ label: "Selo Patos Inovação", href: "/programas/selo-inovacao" },
+	{ label: "Patos + Empregos", href: "/programas/empregos-programa" },
+	{ label: "PICTI", href: "/programas/picti" },
+	{ label: "Pré-aceleração de Startups", href: "/programas/pre-aceleracao-startups" },
 ];
 
 export const heroCategories = [
