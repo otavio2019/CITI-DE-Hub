@@ -36,6 +36,27 @@ Em **Workers & Pages → citi-de-hub → Settings → Build**:
 Sem essa troca, o Workers Builds tenta rodar o comando padrão do Next
 (`next build`) e fica pendurado, porque não existe Worker gerado para publicar.
 
+## Build automático a cada push
+
+O trigger do Workers Builds está ligado na branch `main` com `path_includes: ["*"]`,
+então **todo push publica sozinho**: a Cloudflare roda o build command, depois o
+deploy command, e promove a nova versão a 100% do tráfego.
+
+Validado em 25/11/2026:
+
+| Commit | Origem do build | Resultado |
+| --- | --- | --- |
+| `632ed78` | retry manual | success |
+| `f313bbd` | `push_event` | success |
+| teste de pipeline | `push_event` | success |
+
+Para acompanhar: **Workers & Pages → citi-de-hub → Deployments**, ou o link
+direto do build nos logs. Um build completo leva cerca de 1min30s a 2min.
+
+Se algum push não disparar build, confira nesta ordem: (1) se o commit foi para
+a `main`; (2) se o repositório em Settings → Build ainda aponta para
+`otavio2019/CITI-DE-Hub`; (3) se o trigger não foi desativado.
+
 ## Por que o build antigo travava
 
 1. O repositório não tinha `wrangler.jsonc`, `open-next.config.ts` nem
