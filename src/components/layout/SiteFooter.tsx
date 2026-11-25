@@ -5,6 +5,7 @@ import { contactInfo, officialLinks } from "@/lib/hub-content";
 export function SiteFooter() {
 	return (
 		<footer className="citide-footer">
+			<div className="citide-footer-rays" aria-hidden="true" />
 			<div className="citide-container">
 				<div className="citide-footer-intro">
 					<p className="citide-footer-kicker">Secretaria municipal</p>
@@ -58,6 +59,23 @@ export function SiteFooter() {
 			<div className="citide-footer-bottom citide-container">
 				<span>© Prefeitura de Patos · Todos os direitos reservados.</span>
 				<span>Portal institucional de ciência, tecnologia e inovação.</span>
+			</div>
+
+			<div className="citide-footer-marks">
+				<Image
+					src="/images/prefeitura-branca.png"
+					alt="Prefeitura de Patos"
+					width={774}
+					height={249}
+					className="citide-footer-mark is-prefeitura"
+				/>
+				<Image
+					src="/images/citi-de-branca.png"
+					alt="CiTI-DE — Ciência, Tecnologia, Inovação e Desenvolvimento Econômico"
+					width={1200}
+					height={338}
+					className="citide-footer-mark is-citi"
+				/>
 			</div>
 		</footer>
 	);
