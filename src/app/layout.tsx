@@ -28,6 +28,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="pt-BR" className="h-full antialiased">
 			<body className="min-h-full">
+				<a className="skip-link" href="#conteudo">
+					Pular para o conteúdo
+				</a>
 				<div className="announcement">
 					<span>CiTI-DE</span>
 					<p>Ciência, tecnologia, inovação e desenvolvimento em Patos.</p>

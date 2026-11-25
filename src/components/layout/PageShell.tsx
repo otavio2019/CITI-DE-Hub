@@ -61,11 +61,11 @@ export function PageShell({
 	children,
 }: PageShellProps) {
 	return (
-		<main className="page-shell">
+		<main id="conteudo" className="page-shell">
 			<header className="page-hero">
 				<div className="citide-container">
 					<Link className="page-back" href={backHref}>
-						← {backLabel}
+						<span aria-hidden="true">←</span> {backLabel}
 					</Link>
 					<span className="page-eyebrow">{eyebrow}</span>
 					<h1>{title}</h1>

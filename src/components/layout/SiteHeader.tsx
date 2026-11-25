@@ -14,15 +14,17 @@ type DropdownProps = {
 	items: NavItem[];
 	open: boolean;
 	onToggle: () => void;
+	active?: boolean;
 };
 
-function DesktopDropdown({ label, items, open, onToggle }: DropdownProps) {
+function DesktopDropdown({ label, items, open, onToggle, active }: DropdownProps) {
 	return (
 		<li className="relative">
 			<button
 				type="button"
 				onClick={onToggle}
 				aria-expanded={open}
+				aria-current={active ? "true" : undefined}
 				aria-haspopup="true"
 				className={`flex items-center gap-1 rounded-xl px-3 py-3 transition ${
 					open
@@ -54,13 +56,14 @@ function DesktopDropdown({ label, items, open, onToggle }: DropdownProps) {
 	);
 }
 
-function MobileDropdown({ label, items, open, onToggle, onNavigate }: DropdownProps & { onNavigate: () => void }) {
+function MobileDropdown({ label, items, open, onToggle, onNavigate, active }: DropdownProps & { onNavigate: () => void }) {
 	return (
 		<li>
 			<button
 				type="button"
 				onClick={onToggle}
 				aria-expanded={open}
+				aria-current={active ? "true" : undefined}
 				className="flex w-full items-center justify-between rounded px-3 py-3 text-left transition hover:bg-white/10"
 			>
 				<span>{label}</span>
@@ -88,6 +91,8 @@ function MobileDropdown({ label, items, open, onToggle, onNavigate }: DropdownPr
 export function SiteHeader() {
 	const pathname = usePathname();
 	const isHome = pathname === "/";
+	// A Cartilha é a porta de entrada dos programas, então também marca o grupo.
+	const programsActive = pathname.startsWith("/programas") || pathname === "/cartilha";
 	const [mobileOpen, setMobileOpen] = useState(false);
 	const [programsOpen, setProgramsOpen] = useState(false);
 	const [servicesOpen, setServicesOpen] = useState(false);
@@ -146,7 +151,7 @@ export function SiteHeader() {
 
 			<nav aria-label="Navegação principal" className="hub-nav">
 				<ul className="flex items-center gap-1">
-					<DesktopDropdown label="Programas" items={programLinks} open={programsOpen} onToggle={togglePrograms} />
+					<DesktopDropdown label="Programas" items={programLinks} open={programsOpen} onToggle={togglePrograms} active={programsActive} />
 					<DesktopDropdown label="Serviços" items={serviceLinks} open={servicesOpen} onToggle={toggleServices} />
 					<li>
 						<a href={officialLinks.vitrineStartups} className="rounded-xl px-3 py-3 transition hover:bg-[var(--citi-background)] hover:text-[var(--citi-blue)]">
@@ -185,7 +190,7 @@ export function SiteHeader() {
 			{mobileOpen && (
 				<nav className="site-mobile-nav" aria-label="Menu mobile">
 					<ul>
-						<MobileDropdown label="Programas" items={programLinks} open={programsOpen} onToggle={togglePrograms} onNavigate={closeMenus} />
+						<MobileDropdown label="Programas" items={programLinks} open={programsOpen} onToggle={togglePrograms} onNavigate={closeMenus} active={programsActive} />
 						<MobileDropdown label="Serviços" items={serviceLinks} open={servicesOpen} onToggle={toggleServices} onNavigate={closeMenus} />
 						<li>
 							<a href={officialLinks.vitrineStartups} onClick={closeMenus}>Startups</a>
