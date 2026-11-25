@@ -63,14 +63,14 @@ export function SiteFooter() {
 
 			<div className="citide-footer-marks">
 				<Image
-					src="/images/prefeitura-branca.png"
-					alt="Prefeitura de Patos"
-					width={774}
-					height={249}
+					src="/icons/logo.png"
+					alt="Brasão da Prefeitura de Patos"
+					width={221}
+					height={208}
 					className="citide-footer-mark is-prefeitura"
 				/>
 				<Image
-					src="/images/citi-de-branca.png"
+					src="/images/citi-de-colorida.png"
 					alt="CiTI-DE — Ciência, Tecnologia, Inovação e Desenvolvimento Econômico"
 					width={1200}
 					height={338}
